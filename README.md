@@ -1,6 +1,6 @@
-# Landing-Page
-A simple Django Landing Page for organizations. Simple to deploy.
+# Django Landing Page
 
+A simple Django coming soon landing page for organizations. Easy to deploy and customize.
 
 ## Table of contents
 * [General info](#general-info)
@@ -8,98 +8,102 @@ A simple Django Landing Page for organizations. Simple to deploy.
 * [Features](#features)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Deployment](#deployment)
 * [Status](#status)
-* [Inspiration](#inspiration)
-* [Contact](#contact)
-* [License](#license)
 * [Contributing](#contributing)
+* [License](#license)
 
 
 ## General info
-A simple Django Landing Page for organizations built with Python and Django.
+A simple Django coming soon landing page built with Python and Django. Perfect for announcing upcoming websites or products.
 
 ## Screenshots
 
-![Screenshot_2020-06-14 Coming Soon ](https://user-images.githubusercontent.com/19711677/84585879-cbfbb280-add9-11ea-8263-f2da37cbb638.png)
-
-
+![Coming Soon Page](https://user-images.githubusercontent.com/19711677/84585879-cbfbb280-add9-11ea-8263-f2da37cbb638.png)
 
 ## Features
 
-* Email subscription
+* Responsive design
+* Social media links
+* Email subscription form (frontend only)
+* Video background support
+* Bootstrap 4 framework
+* Font Awesome icons
 
 ## Technologies
-* Python 3.6
-* Django 3
-* Javascript
+* Python 3.8
+* Django 2.2.28
+* JavaScript
 * HTML5
-* CSS3 
+* CSS3
 * Bootstrap 4
-* Font awesome
+* Font Awesome
+* jQuery
+* Vide.js for video backgrounds
 
 ## Setup
 
-To run this app, you will need to follow these 3 steps:
+To run this app locally, follow these steps:
 
-#### 1. Requirements
-  - a Laptop
+#### Prerequisites
+- Python 3.8 or higher
+- Pipenv (recommended) or pip
+- Git
 
-  - Text Editor or IDE (eg. vscode, PyCharm)
+#### Installation
 
-  - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed on your Laptop.
+```bash
+# Clone this repository
+git clone https://github.com/upstackpilot0710/django-landing-page.git
 
+# Navigate to the project directory
+cd django-landing-page
 
-#### 2. Install Python and Pipenv
-  - [Python3](https://www.python.org/downloads/)
-  
+# Install dependencies using Pipenv
+pipenv install
 
-  - [Pipenv](https://pipenv-es.readthedocs.io/es/stable/)
+# Activate the virtual environment
+pipenv shell
 
-#### 3. Local Setup and Running on Windows, Linux and Mac OS
+# Run migrations (if any models are added)
+python manage.py migrate
 
-  ```
-  # Clone this repository into the directory of your choice
-  $ git clone https://github.com/Williano/Landing-Page.git
+# Start the development server
+python manage.py runserver
 
-  # Move into project folder
-  $ cd Landing-Page
+# Open your browser and visit http://127.0.0.1:8000
+```
 
-  # Install from Pipfile
-  $ pipenv install
+## Deployment
 
-  # Activate the Pipenv shell
-  $ pipenv shell
+This project includes a `Procfile` for easy deployment to platforms like Heroku.
 
-  # Start server
-  (Landing-Page-XXXX) $ python manage.py runserver
-  
-  # Copy the IP address provided once your server has completed building the site. (It will say something like >> Serving at 127.0.0.1....).
-  
-  # Open the address in the browser
-  >>> http://127.0.0.1:XXXX
-  
-  ```
+### Heroku Deployment
 
+1. Create a Heroku app
+2. Connect your GitHub repository
+3. Enable automatic deploys or deploy manually
+4. Set environment variables if needed (DEBUG=False for production)
+
+### Local Production Setup
+
+For production deployment, make sure to:
+- Set `DEBUG = False` in settings.py
+- Configure `ALLOWED_HOSTS` appropriately
+- Set up a proper web server (nginx + gunicorn recommended)
+- Use environment variables for sensitive settings
 
 ## Status
-Project is: _done_
-
-## Inspiration
-This project was based on the goal of starting a small Django project on my own.
-
-
-## Contact
-Created by [Williano](https://williano.github.io/) - feel free to contact me!
-
-## License
->You can check out the full license [here](https://github.com/Williano/Landing-Page/blob/master/LICENSE)
-
-This project is licensed under the terms of the **MIT** license.
+Project is: _completed_ and ready for use.
 
 ## Contributing
 
-1. Fork it (<https://github.com/Williano/Landing-Page.git>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
